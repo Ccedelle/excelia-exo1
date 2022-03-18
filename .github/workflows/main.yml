@@ -57,6 +57,7 @@ jobs:
           python -m pytest --doctest-modules --ignore=main.py --cov
 
   deploy:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
